@@ -1,0 +1,19 @@
+.venv
+
+# Tex Auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
