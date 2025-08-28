@@ -44,16 +44,19 @@ def get_inverse(suit):
 
 
 def beats(card_a, card_b, trump=None):
-    print(card_a, card_b)
+    print(f"You: {card_a} Them: {card_b}")
     if trump:
         if card_a.suit == trump:
             if card_b.suit == trump:
                 # special check for left bower
-                return card_a > card_b
+                return card_a >= card_b
             elif card_b.suit == get_inverse(trump):
                 return card_b.value != "Jack" or card_a.value == "Jack"
+            else:
+                return True
         else:
-            card_b.suit != trump and card_a > card_b
+            if card_b.suit != trump:
+                return card_a > card_b
 
     else:
         if card_a.suit == card_b.suit:
